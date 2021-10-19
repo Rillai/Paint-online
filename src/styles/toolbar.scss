@@ -1,0 +1,29 @@
+@import "variables";
+
+%toolbar {
+  height: $toolbar-height;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 4px 5px gray;
+
+  .toolbar__btn {
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.toolbar {
+  @extend %toolbar;
+  z-index: 999;
+}
+
+.setting-bar {
+  @extend %toolbar;
+  top: $toolbar-height;
+}
